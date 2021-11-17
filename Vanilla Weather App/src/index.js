@@ -6,6 +6,12 @@ let hours = now.getHours();
 let minutes = now.getMinutes();
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
+if (minutes <10) {
+  minutes =`0${minutes}`;
+}
+if (hours <10) {
+  hour =`0${hours}`;
+}
 
 function search(event) {
   event.preventDefault();
@@ -53,6 +59,10 @@ function showTemperature(response) {
   city.innerHTML = temperature;
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
+     let description = document.querySelector("description");
+  description.innerHTML = response.data.weather[0].description;
+  let wind = document.querySelector("wind");
+  wind.innerHTML = response.data.wind.speed;
 }
 
 function showPosition(position) {

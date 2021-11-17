@@ -18,7 +18,7 @@ form {
 }
 .container {
   border: 1px solid red;
-  border-radius: 1px;
+  border-radius: 10px;
   padding: 20px;
   margin: 0 auto;
   max-width: 600px;
@@ -29,5 +29,6 @@ form {
 }
 li {
   list-style: none;
+
 
 }
