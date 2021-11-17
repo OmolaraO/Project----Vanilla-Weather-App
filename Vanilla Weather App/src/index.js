@@ -53,7 +53,6 @@ function searchSubmit(event) {
 }
 
 function showTemperature(response) {
-  console.log();
   let temperature = Math.round(response.data.main.temp);
   let city = document.querySelector("h3");
   city.innerHTML = temperature;
