@@ -10,7 +10,7 @@ if (minutes <10) {
   minutes =`0${minutes}`;
 }
 if (hours <10) {
-  hour =`0${hours}`;
+  hours =`0${hours}`;
 }
 
 function search(event) {
@@ -62,6 +62,8 @@ function showTemperature(response) {
   description.innerHTML = response.data.weather[0].description;
   let wind = document.querySelector("wind");
   wind.innerHTML = response.data.wind.speed;
+  let icon = document.querySelector("icon");
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function showPosition(position) {
