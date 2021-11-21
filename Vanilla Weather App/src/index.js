@@ -58,11 +58,11 @@ function showTemperature(response) {
   city.innerHTML = temperature;
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
-     let description = document.querySelector("description");
+     let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
-  let wind = document.querySelector("wind");
+  let wind = document.querySelector("#wind");
   wind.innerHTML = response.data.wind.speed;
-  let icon = document.querySelector("icon");
+  let icon = document.querySelector("#icon");
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
