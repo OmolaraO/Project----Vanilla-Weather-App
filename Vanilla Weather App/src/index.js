@@ -35,7 +35,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let h3 = document.querySelector("#temp");
-  let fahrenheitTemperature = (celsiusTemperature (32 - 32) * 5/9 = 0;
+  let fahrenheitTemperature = (celsiusTemperature * (9 / 5) + 32);
   h3.innerHTML = Math.round(fahrenheitTemperature);
 
 }
@@ -58,7 +58,6 @@ function searchSubmit(event) {
   searchCity(city);
 }
 
-celsiusTemperature = response.data.main.temp;
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -66,6 +65,7 @@ function showTemperature(response) {
   city.innerHTML = temperature;
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;
+  celsiusTemperature = response.data.main.temp;
      let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
   let wind = document.querySelector("#wind");
