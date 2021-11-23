@@ -6,10 +6,10 @@ let hours = now.getHours();
 let minutes = now.getMinutes();
 let h2 = document.querySelector("h2");
 h2.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
-if (minutes <10) {
+if (minutes < 10) {
   minutes =`0${minutes}`;
 }
-if (hours <10) {
+if (hours < 10) {
   hours =`0${hours}`;
 }
 
@@ -25,20 +25,23 @@ form.addEventListener("submit", searchSubmit);
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let h3 = document.querySelector("#temp");
-  h3.innerHTML = Math.round(celsiusTemperature)
-
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(celsiusTemperature)
 }
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let h3 = document.querySelector("#temp");
+  let temperature = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.List.add("active");
   let fahrenheitTemperature = (celsiusTemperature * (9 / 5) + 32);
-  h3.innerHTML = Math.round(fahrenheitTemperature);
-
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
@@ -61,7 +64,7 @@ function searchSubmit(event) {
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  let city = document.querySelector("h3");
+  let city = document.querySelector("#temperature");
   city.innerHTML = temperature;
   let h1 = document.querySelector("h1");
   h1.innerHTML = response.data.name;

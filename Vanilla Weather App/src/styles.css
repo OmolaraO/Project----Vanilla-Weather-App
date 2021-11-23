@@ -3,7 +3,7 @@ h1 {
   font-family: calistoga;
   font-size: 50px;
 }
-h2, h4 {
+h2, h3 {
   font-size: Bold;
   font-family: times new roman;
   text-transform: capitalize;
@@ -35,9 +35,17 @@ li {
   color: rgb(33, 33, 33);
   font-size: 64px;
   font-weight: 400;
+  color: blue;
 }
-.weather-temperature.units {
+.weather-temperature .units {
 position: relative;
 font-size: 16px;
 top: -34px;
+}
+.weather-temperature .active {
+  color:rgb(33, 33, 33);
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
