@@ -36,8 +36,9 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
+
   celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.List.add("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * (9 / 5) + 32);
   temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
