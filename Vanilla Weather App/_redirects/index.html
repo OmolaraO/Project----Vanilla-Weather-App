@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+    <h1>
+        Lagos
+    </h1>
+        <h2>
+            Thur 09/09
+        </h2>
+        <div class="clearfix weather-temperature">
+        <img src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+        id="icon" />
+        <div class="float-left"><strong id="temperature"></strong>
+        <span class="units"><a href="#" id="celsius-link" class="active">°C</a>
+             | <a href="#" id="fahrenheit-link">°F</a></span> 
+            </div>
+            </div>
+             <span class="temp" id="temp"></span>
+            <span class="units">
+            </span>
+            <h3 id="description"></h3>
+            <div class="col-6">
+                <ul>
+                    <li>
+                        Humidity: <span id="humidity"></span>%
+                    </li>
+                    <li>
+                        Wind: <span id="wind"></span> km/h
+                    </li>
+                    </ul>
+                    </div>
+    </div>
+    </ul>
+    </div>
+    <hr />
+    Next 4 Days
+    <hr />
+    <div class="row"></div>
+    <div class="col">
+        <p>Fri <br />10/09</p>
+        <p>☁</p>
+        <p>23/30&degC</p>
+        <hr />
+        <div class="col">
+            <p>Sat <br />11/09</p>
+            <p>☁</p>
+            <p>23/29&degC</p>
+        </div>
+        <hr />
+        <div class="col">
+            <p>Sun <br />11/09</p>
+            <p>☁</p>
+            <p>24/30&degC</p>
+        </div>
+        <hr />
+        <div class="col">
+            <p>Mon <br />12/09</p>
+            <p>☁</p>
+            <p>23/29&degC</p>
+        </div>
+        <hr />
+        <form>
+            <input type="text" placeholder="Search for a city" id="search-text-input" />
+            <input type="submit" value="Search" />
+        </form>
+        <script src="src/index.js"></script>
+
+          <a href="https://github.com/OmolaraO/Project---Weather-App">Open source code</a> by Omolara Olayiwola
+        
+</body>
+
+</html>
