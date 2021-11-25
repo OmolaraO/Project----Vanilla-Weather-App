@@ -13,6 +13,36 @@ if (hours < 10) {
   hours =`0${hours}`;
 }
 
+function displayForecast() {
+  let forecastElement =document.querySelector("#forecast");
+  
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat", "Sun"];
+  days.forEach(function(day) {
+ forecastHTML = forecastHTML + `
+  
+    <div class="col-2">
+        <div class="weather-forecast-date">
+        ${day}
+    </div>
+        <img src="http://openweathermap.org/img/wn/02n@2x.png" />
+        <div class="weather-forecast-temperatures"></div>
+        <span class="weather-forecast-temperature-max">
+        18°
+        </span>
+        <span class="weather-forecast-temperature-min">
+         12°
+        </span>  
+    </div>
+  `;
+  })
+ 
+  
+ 
+    forecastHTML = forecastHTML+`</div>`;
+    forecastElement.innerHTML = forecastHTML;
+}
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-text-input");
@@ -90,3 +120,4 @@ function showPosition(position) {
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
+displayForecast();
