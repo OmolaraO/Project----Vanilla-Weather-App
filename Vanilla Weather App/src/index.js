@@ -26,7 +26,7 @@ function displayForecast(response) {
         <div class="weather-forecast-date">
         ${day}
     </div>
-        <img src="http://openweathermap.org/img/wn/02n@2x.png" />
+        <img src="http://openweathermap.org/img/wn/02n@2x.png"  width="42" />
         <div class="weather-forecast-temperatures"></div>
         <span class="weather-forecast-temperature-max">
         18°
