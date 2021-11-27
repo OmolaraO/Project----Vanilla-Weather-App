@@ -12,6 +12,7 @@ h2, h3 {
   font-size: Bold;
   font-family: times new roman;
   text-transform: capitalize;
+  color: white;
 }
 
 form {
