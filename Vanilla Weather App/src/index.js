@@ -15,8 +15,8 @@ if (hours < 10) {
 
 
 function formatDay(timestamp) {
-let day = new Date(timestamp * 1000);
-let day = day.getDay();
+let date = new Date(timestamp * 1000);
+let day = date.getDay();
 let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 return days[day];
 }
