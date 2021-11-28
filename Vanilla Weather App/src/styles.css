@@ -1,5 +1,5 @@
 .container {
-  background-color:rgb(149, 141, 141);
+  background-color:rgb(56, 56, 56);
 }
 
 
@@ -10,7 +10,7 @@ h1 {
 }
 h2, h3 {
   font-size: Bold;
-  font-family: times new roman;
+  font-family: dancing script;
   text-transform: capitalize;
   color: white;
 }
