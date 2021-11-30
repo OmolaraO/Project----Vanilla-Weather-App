@@ -5,12 +5,12 @@ let date = now.getDate();
 let hours = now.getHours();
 let minutes = now.getMinutes();
 let h2 = document.querySelector("h2");
-h2.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
 if (minutes < 10) {
   minutes =`0${minutes}`;
 }
 if (hours < 10) {
   hours =`0${hours}`;
+  h2.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
 }
 
 
