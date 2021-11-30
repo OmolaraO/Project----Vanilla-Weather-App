@@ -10,8 +10,9 @@ if (minutes < 10) {
 }
 if (hours < 10) {
   hours =`0${hours}`;
-  h2.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
 }
+  h2.innerHTML = `${date}, ${day}, ${hours}:${minutes}`;
+
 
 
 function formatDay(timestamp) {
